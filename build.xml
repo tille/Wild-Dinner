@@ -15,12 +15,24 @@
   </target>
 
   <target name="run" depends="compile">
+    <echo message="*** Test File working"/>
+    <java classname="PrincipalCenaSalvajes" 
+	  classpath="${bin}">
+      <arg value="1"/>
+      <arg value="2"/>
+    </java>
+  </target>
+  
+  <target name="run-all" depends="init">
+    <mkdir dir="${bin}"/>
+    <javac srcdir="${src}" destdir="${bin}"/>
     <echo message="*** Test File working ***"/>
     <java classname="PrincipalCenaSalvajes" 
 	  classpath="${bin}">
       <arg value="1"/>
       <arg value="2"/>
     </java>
+    <delete dir="${bin}"/>
   </target>
 
   <target name="clean">
