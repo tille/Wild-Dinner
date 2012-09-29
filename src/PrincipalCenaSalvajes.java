@@ -10,10 +10,12 @@ public class PrincipalCenaSalvajes {
   }
 
   public static void main(String args[]) {
-    if (args.length != 2 || nSalvajes <= 0 || nPorciones <= 0) usage();
-  
+    if (args.length != 2) usage();
+
     int nSalvajes = Integer.parseInt(args[0]);
     int nPorciones = Integer.parseInt(args[1]);
+    if (nSalvajes <= 0 || nPorciones <= 0) usage();
+
     Olla olla = new Olla(nPorciones);
   
     new Thread(new Cocinero(olla)).start();
