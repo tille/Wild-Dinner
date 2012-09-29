@@ -19,7 +19,7 @@ implements Runnable {
     while (true) {
       System.out.println(this.toString() + " solicita comida");
       int porcion = olla.obtenerPorcion();
-      assert porcion < 0;
+      assert porcion > 0;
       System.out.println(this.toString() + " come: " + porcion);
       comer(porcion);
     }
