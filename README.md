@@ -1,5 +1,5 @@
 Wild-Dinner
------------
+===========
 
 Una tribu de salvajes come cenas conmunales de una olla gigantesca que puede mantener M porciones de cocido de misionero. Cuando un salvaje quiere comer, se sirve por si mismo de la olla, a menos que ésta esté vacía. Si la olla está vacía, el salvaje despierta al cocinero y entonces espera hasta que este haya rellenado la olla.
 
@@ -24,3 +24,9 @@ Clean the folder:
 $ ant clean
 ````
 
+Other way is type:
+------------------
+
+````bash
+$ ant run-all
+````
