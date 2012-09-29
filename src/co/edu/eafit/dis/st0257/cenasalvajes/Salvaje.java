@@ -2,8 +2,7 @@ package co.edu.eafit.dis.st0257.cenasalvajes;
 
 import java.util.Random;
 
-public class Salvaje
-implements Runnable {
+public class Salvaje implements Runnable {
 
   private int id;
   private Olla olla;
