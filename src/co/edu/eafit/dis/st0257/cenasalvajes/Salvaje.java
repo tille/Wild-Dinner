@@ -21,7 +21,7 @@ public class Salvaje
 	    System.out.println(this.toString() +
 			       " solicita comida");
 	    int porción = olla.obtenerPorcion();
-	    assert porción < 0;
+	    assert porción > 0;
 	    System.out.println(this.toString() +
 			       " come: " +
 			       porción);
