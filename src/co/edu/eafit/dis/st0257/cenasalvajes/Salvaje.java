@@ -7,6 +7,7 @@ public class Salvaje implements Runnable {
   private int id;
   private Olla olla;
   private Random rand;
+  private Cocinero cocinero;
 
   public Salvaje(int id, Olla olla) {
     this.id = id;
@@ -16,9 +17,12 @@ public class Salvaje implements Runnable {
 
   public void run() {
     while (true) {
-      System.out.println(this.toString() + " solicita comida");
+      //System.out.println(this.toString() + " solicita comida");
+      System.out.println("test1");
       int porcion = olla.obtenerPorcion();
-      assert porcion > 0;
+      System.out.println("test3");
+      System.out.println(this.toString() + " solicita comida test");
+      assert porcion > 0; // nunca deberia ser menor que 1
       System.out.println(this.toString() + " come y quedan " + porcion);
       comer(porcion);
     }

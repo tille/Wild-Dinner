@@ -2,20 +2,35 @@ package co.edu.eafit.dis.st0257.cenasalvajes;
 
 public class Olla {
 
-  private int porciones = 0;
+  private int porciones = 0, tamanio = 0;
 
   public Olla(int porciones) {
-    this.porciones = porciones;
+    this.porciones = this.tamanio = porciones;
   }
 
   public synchronized int obtenerPorcion() {
-    if (porciones != 0){
-      int ret = porciones--;
-      return ret;
-    }else Cocinero.run();
+    System.out.println(" test2 ");    
+    /*if(porciones == 0){ 
+      notify();
+      desactivar();
+    }
+    int ret = porciones--;*/
+    return 2;
   }
-
+  
   public synchronized void ponerPorciones() {
-    porciones++;
+    if(porciones == tamanio) desactivar();
+    int cont = tamanio-porciones;
+    porciones = tamanio;
+    System.out.println(" Cocinero lleno la olla ");
+    if( tamanio == cont) notify();
+    desactivar();
+  }
+  
+  public void desactivar(){
+   try{
+     wait();
+   } catch(InterruptedException ie) {
+   }
   }
 }

@@ -2,7 +2,7 @@ package co.edu.eafit.dis.st0257.cenasalvajes;
 
 public class Cocinero implements Runnable {
   private Olla olla;
-  
+
   public Cocinero(Olla olla) {
     this.olla = olla;
   }
@@ -10,7 +10,7 @@ public class Cocinero implements Runnable {
   public void run() {
     while (true) {
       System.out.println(this.toString() + " a domir");
-      dormir();
+      //dormir();
       System.out.println(this.toString() + " a cocinar");
       olla.ponerPorciones();
     }
@@ -18,8 +18,9 @@ public class Cocinero implements Runnable {
 
   public void dormir() {
     try {
-      Thread.sleep(10000);
+      wait();
     } catch (InterruptedException ie) {
+      System.exit(-1);  
     }
   }
 
