@@ -12,16 +12,4 @@ public class Cocinero implements Runnable {
       olla.ponerPorciones();
     }
   }
-
-  public void dormir() {
-    try {
-      wait();
-    } catch (InterruptedException ie) {
-      System.exit(-1);  
-    }
-  }
-
-  public String toString() {
-    return "Cocinero ";
-  }
 }

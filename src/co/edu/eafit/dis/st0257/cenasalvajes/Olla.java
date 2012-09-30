@@ -19,10 +19,10 @@ public class Olla {
 
   public synchronized void ponerPorciones() {
     if(porciones == tamanio){ 
-      System.out.println("Cocinero" + " a dormir");
+      System.out.println("Cocinero a dormir");
       desactivar();
     }
-    System.out.println("Cocinero" + " a cocinar");
+    System.out.println("Cocinero a cocinar");
     porciones = tamanio;
     notify();
   }
