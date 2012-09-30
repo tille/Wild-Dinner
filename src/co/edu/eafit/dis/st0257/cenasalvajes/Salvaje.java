@@ -19,7 +19,7 @@ public class Salvaje implements Runnable {
       System.out.println(this.toString() + " solicita comida");
       int porcion = olla.obtenerPorcion();
       assert porcion > 0;
-      System.out.println(this.toString() + " come: " + porcion);
+      System.out.println(this.toString() + " come y quedan " + porcion);
       comer(porcion);
     }
   }

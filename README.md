@@ -1,7 +1,7 @@
 Wild-Dinner
 ===========
 
-Una tribu de salvajes come cenas conmunales de una olla gigantesca que puede mantener M porciones de cocido de misionero. Cuando un salvaje quiere comer, se sirve por si mismo de la olla, a menos que ésta esté vacía. Si la olla está vacía, el salvaje despierta al cocinero y entonces espera hasta que este haya rellenado la olla.
+A tribe of savages eat communal dinners of a gigantic pot that can keep M portions of missioner soup. when a savage wants to eat, he take for himself the pot, unless the pot is empty. if the pot is empty, the savage wakes the kitchener up and then he waits until the pot is full.
 
 Clone the repository:
 
