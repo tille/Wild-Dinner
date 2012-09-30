@@ -17,13 +17,12 @@ public class Salvaje implements Runnable {
 
   public void run() {
     while (true) {
-      //System.out.println(this.toString() + " solicita comida");
-      System.out.println("test1");
+      System.out.println(this.toString() + " solicita comida");
       int porcion = olla.obtenerPorcion();
-      System.out.println("test3");
       System.out.println(this.toString() + " solicita comida test");
       assert porcion > 0; // nunca deberia ser menor que 1
-      System.out.println(this.toString() + " come y quedan " + porcion);
+		restantes = porcion -1;
+      System.out.println(this.toString() + " come y quedan " + restantes);
       comer(porcion);
     }
   }

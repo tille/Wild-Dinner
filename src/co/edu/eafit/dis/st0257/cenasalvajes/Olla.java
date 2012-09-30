@@ -9,13 +9,12 @@ public class Olla {
   }
 
   public synchronized int obtenerPorcion() {
-    System.out.println(" test2 ");    
-    /*if(porciones == 0){ 
+    if(porciones == 0){ 
       notify();
       desactivar();
     }
-    int ret = porciones--;*/
-    return 2;
+    int ret = porciones--;
+    return ret;
   }
   
   public synchronized void ponerPorciones() {
