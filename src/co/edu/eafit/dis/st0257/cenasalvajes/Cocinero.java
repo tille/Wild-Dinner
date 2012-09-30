@@ -9,9 +9,6 @@ public class Cocinero implements Runnable {
 
   public void run() {
     while (true) {
-      System.out.println(this.toString() + " a domir");
-      dormir();
-      System.out.println(this.toString() + " a cocinar");
       olla.ponerPorciones();
     }
   }

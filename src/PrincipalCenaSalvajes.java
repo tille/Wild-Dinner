@@ -17,7 +17,6 @@ public class PrincipalCenaSalvajes {
     if (nSalvajes <= 0 || nPorciones <= 0) usage();
 
     Olla olla = new Olla(nPorciones);
-  
     new Thread(new Cocinero(olla)).start();
     for (int i = 0; i < nSalvajes; ++i) {
       new Thread(new Salvaje(i, olla)).start();

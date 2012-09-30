@@ -16,20 +16,21 @@ public class Olla {
     int ret = porciones--;
     return ret;
   }
-  
+
   public synchronized void ponerPorciones() {
-    if(porciones == tamanio) desactivar();
-    int cont = tamanio-porciones;
+    if(porciones == tamanio){ 
+      System.out.println("Cocinero" + " a dormir");
+      desactivar();
+    }
+    System.out.println("Cocinero" + " a cocinar");
     porciones = tamanio;
-    System.out.println(" Cocinero lleno la olla ");
-    if( tamanio == cont) notify();
-    desactivar();
+    notify();
   }
-  
+
   public void desactivar(){
-   try{
-     wait();
-   } catch(InterruptedException ie) {
-   }
+    try{
+      wait();
+    } catch(InterruptedException ie) {
+    }
   }
 }
