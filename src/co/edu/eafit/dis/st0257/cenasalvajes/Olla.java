@@ -8,11 +8,14 @@ public class Olla {
     this.porciones = porciones;
   }
 
-  public int obtenerPorcion() {
-    int ret = porciones--;
-    return ret;
+  synchronized public int obtenerPorcion() {
+    if (porciones != 0){
+      int ret = porciones--;
+      return ret;
+    }else Cocinero.run();
   }
 
-  public void ponerPorciones() {
+  synchronized public void ponerPorciones() {
+    porciones++;
   }
 }
