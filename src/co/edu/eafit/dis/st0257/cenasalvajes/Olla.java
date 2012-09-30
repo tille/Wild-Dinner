@@ -8,7 +8,7 @@ public class Olla {
 		this.porciones = porciones;
     }
 
-    synchronized public int obtenerPorcion() {
+    public synchronized int obtenerPorcion() {
 		if (porciones != 0){
 			int ret = porciones--;
 			return ret;
@@ -17,7 +17,7 @@ public class Olla {
 			Cocinero.run();
     }
 
-    synchronized public void ponerPorciones() {
+    public synchronized void ponerPorciones() {
 		porciones++;
     }
 }
